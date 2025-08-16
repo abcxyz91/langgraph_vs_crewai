@@ -16,7 +16,6 @@ Both aim to streamline AI application design but differ in **architecture**, **i
 |---------|-------------|-----------|
 | **Structured State** | Uses Pydantic `BaseModel` (`MessageState`) to define state fields | Uses `TypedDict` + `Annotated` for state schema |
 | **LLM Integration** | Supports direct model calls with structured output via `response_format` | Uses `.with_structured_output()` for parsing into Pydantic models |
-| **Message Classification** | Both classify user input into `"emotional"` or `"logical"` | Same logic, different syntax |
 | **Routing** | Both route messages to different response handlers based on classification | Same routing goal |
 | **Conversation Handling** | Both maintain conversation history across turns | Implemented differently (manual vs reducer) |
 | **Multi-Agent Flow** | Support multiple “agent” nodes/functions | Similar agent separation |
